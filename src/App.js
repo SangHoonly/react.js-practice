@@ -1,14 +1,9 @@
 import { Fragment } from "react";
 import "./App.css";
+import MyComponent from "./MyComponent";
 
-function App() {
-  const name = "리액트";
+const App = () => {
+  return <MyComponent name="React" />;
+};
 
-  return (
-    <Fragment>
-      <div className="react">{name}</div>
-      <input></input>
-    </Fragment>
-  );
-}
 export default App;
