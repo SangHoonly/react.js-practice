@@ -2,26 +2,22 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class MyComponent extends Component {
+  state = { message: "하이요" };
+
+  handleClick = () => {
+    alert(this.state.message);
+    this.setState({ message: "바이요" });
+  };
+
   render() {
-    const { name, age, address, favoriteNum, children } = this.props;
     return (
       <div>
-        <h1>안녕하세요. {name}입니다.</h1>
-        <h3>
-          나이는 {age}이고, 사는곳은 {address}입니다.
-        </h3>
-        <h3>좋아하는 숫자는 {favoriteNum}입니다.</h3>
+        <h1>안녕하세요</h1>
+        <h2>버튼을 누르세요</h2>
+        <button onClick={this.handleClick}>버튼클릭!</button>
       </div>
     );
   }
 }
-
-MyComponent.defaultProps = {
-  name: "기본 이름",
-};
-
-MyComponent.propTypes = {
-  name: PropTypes.string,
-};
 
 export default MyComponent;
