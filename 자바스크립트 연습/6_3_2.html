@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>stopwatch</title>
+    <script>
+      window.onload = () => {
+        document.getElementById("btn").onclick = () => {
+          var h = parseFloat(document.getElementById("height").value);
+          console.dir(document.getElementById("height"));
+          var w = parseFloat(document.getElementById("weight").value);
+          var b = document.getElementById("bmi");
+          console.dir(b);
+          b.innerHTML = (w / h / h).toFixed(1);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h4>키: <input type="number" id="height" />m</h4>
+    <h4>몸무게: <input type="number" id="weight" />m</h4>
+    <h4>당신의 체질량지수는 <output id="bmi">?</output> 입니다.</h4>
+    <input type="button" value="계산" id="btn" />
+  </body>
+</html>
