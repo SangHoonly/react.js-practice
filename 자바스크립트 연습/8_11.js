@@ -9,5 +9,3 @@ var obj = {
     g();
   },
 };
-
-console.log(obj.say());
